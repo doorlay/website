@@ -9,6 +9,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 """"""""""""""""""""
