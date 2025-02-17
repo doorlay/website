@@ -37,3 +37,8 @@ a:after {
 a:hover:after {
     top: 0%;
 }
+
+.book-description {
+    font-size: 1.2em;
+    font-style: italic;
+}
