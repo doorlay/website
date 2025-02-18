@@ -13,10 +13,10 @@ h1 {
     margin-bottom: 0;
 }
 p {
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: 300;
     line-height: 1.6;
-    max-width: 26em;
+    max-width: 30em;
 }
 a {
     text-decoration: none;
@@ -41,4 +41,9 @@ a:hover:after {
 .book-description {
     font-size: 1.2em;
     font-style: italic;
+    max-width: 100em;
+}
+
+.book-title {
+    font-weight: 400;
 }
