@@ -41,7 +41,7 @@ a:hover:after {
 .book-description {
     font-size: 1.2em;
     font-style: italic;
-    max-width: 100em;
+    max-width: 40em;
 }
 
 .book-title {
