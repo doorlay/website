@@ -15,6 +15,8 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 Plug 'dense-analysis/ale'
+Plug 'preservim/nerdcommenter'
+Plug 'Raimondi/delimitMate'
 " UI improvemets
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
@@ -34,3 +36,6 @@ set background=dark
 let g:highlightedyank_highlight_duration = 500
 set wildmode=longest,list,full
 set wildmenu
+let mapleader = " "
+set tabstop=4
+set shiftwidth=4
