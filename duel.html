@@ -1,88 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Duel Countdown</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,700" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: calc(10px + 0.33vw);
-      -webkit-font-smoothing: antialiased;
-      padding: 5vh 10vw;
-      padding-top: 3vh;
-      color: #121314;
-      background: #f2f2f2;
-    }
-    h1 {
-      font-size: 4.0em;
-      font-weight: 500;
-      margin-bottom: 0;
-    }
-    p {
-      font-size: 1.6em;
-      font-weight: 300;
-      line-height: 1.6;
-      max-width: 26em;
-    }
-    a {
-      text-decoration: none;
-      color: #121314;
-      position: relative;
-    }
-    a:after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 60%;
-      left: -0.1em;
-      right: -0.1em;
-      bottom: 0;
-      transition: top 200ms cubic-bezier(0, .8, .13, 1);
-      background-color: #AAD8CF;
-    }
-    a:hover:after {
-      top: 0%;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>doorlay.com - duel</title>
 
-    <h1 id="demo"></h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("Aug 4, 2101 00:00:00").getTime();
+    <link href="main.css" rel="stylesheet" />
+  </head>
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+  <body>
+    <div class="content">
+      <header class="site-header">
+        <a class="main" href="/" aria-label="Home" title="Home">doorlay.com</a>
+      </header>
 
-    // Get today's date and time
-    var now = new Date().getTime();
+      <main>
+        <h1 id="demo" style="margin-top: 1rem;"></h1>
+      </main>
+    </div>
+	<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Aug 4, 2101 00:00:00").getTime();
+  var el = document.getElementById("demo");
 
-    // Find the distance between now and the count down date
+  function render() {
+    var now = Date.now();
     var distance = countDownDate - now;
 
-    // Time calculations for days, hours, minutes and seconds
+    if (distance < 0) {
+      el.textContent = "EXPIRED";
+      return false; // stop
+    }
+
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Display the result in the element with id="demo"
-    document.getElementById("demo").innerHTML = days + " days, " + hours + " hours, "
-    + minutes + " minutes, and " + seconds + " seconds remaining.";
+    el.textContent =
+      days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds remaining.";
+    return true;
+  }
 
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-    }, 1000);
-    </script>
+  // Render immediately (no 1s blank)
+  render();
 
-
-</body>
+  // Then update every second
+  var x = setInterval(function () {
+    if (!render()) clearInterval(x);
+  }, 1000);
+</script>
+		</body>
 </html>
