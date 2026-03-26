@@ -355,7 +355,16 @@ footer a {
 @media (max-width: 600px) {
 
   .hero {
+    background:
+      radial-gradient(ellipse at 20% -20%, rgba(242, 140, 40, 0.35) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% -20%, rgba(242, 140, 40, 0.35) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 0%, rgba(100, 50, 10, 0.3) 0%, transparent 60%),
+      #0d0a06;
     padding: 50px 16px 60px;
+  }
+
+  .hero::before {
+    display: none;
   }
 
   .hero-logo {
@@ -372,6 +381,13 @@ footer a {
 
   .reunion-title {
     font-size: 1.8rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 0;
   }
 
   nav a {
