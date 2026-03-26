@@ -14,39 +14,48 @@ body {
 /* Header */
 
 header {
-  background: linear-gradient(135deg, #1f3a5f, #294a78);
+  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
   color: white;
   text-align: center;
-  padding: 90px 20px 80px;
+  padding: 60px 20px 70px;
+}
+
+.header-logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
 }
 
 .subtitle {
   font-size: 1.4rem;
   margin-top: 10px;
+  color: #f28c28;
+  font-weight: 600;
 }
 
 .date {
   margin-top: 8px;
+  font-size: 1.2rem;
   opacity: .9;
 }
 
 /* Navigation */
 
 nav {
-  background: rgba(255,255,255,0.95);
-  border-bottom: 1px solid #e4e6eb;
+  background: rgba(26, 26, 26, 0.95);
+  border-bottom: 1px solid #333;
   text-align: center;
   padding: 16px;
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   backdrop-filter: blur(6px);
 }
 
@@ -54,11 +63,13 @@ nav a {
   margin: 0 16px;
   padding: 8px 10px;
   text-decoration: none;
-  color: #1f3a5f;
+  color: #f28c28;
   font-weight: 600;
+  transition: color 0.2s;
 }
 
 nav a:hover {
+  color: #ffb366;
   text-decoration: underline;
 }
 
@@ -77,8 +88,8 @@ section {
 }
 
 h2 {
-  color: #1f3a5f;
-  border-bottom: 2px solid #e8e8e8;
+  color: #1a1a1a;
+  border-bottom: 3px solid #f28c28;
   padding-bottom: 6px;
   margin-bottom: 18px;
 }
@@ -96,30 +107,55 @@ h2 {
 /* Schedule */
 
 .schedule p {
-  margin: 10px 0;
+  margin: 14px 0;
+  padding: 10px 14px;
+  border-left: 3px solid #f28c28;
+  background: #fdf6ef;
+  border-radius: 0 6px 6px 0;
 }
 
 .schedule span {
   font-weight: 700;
-  color: #1f3a5f;
-  margin-right: 10px;
+  color: #1a1a1a;
+  margin-right: 12px;
+  min-width: 100px;
+  display: inline-block;
 }
 
-/* RSVP Button */
+/* Limited notice */
+
+.limited {
+  background: #fff3e0;
+  border: 1px solid #f28c28;
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* RSVP */
+
+.rsvp-card {
+  text-align: center;
+  padding: 40px 30px;
+}
 
 .rsvp-button {
   display: inline-block;
-  margin: 20px 0 10px 0;
-  background: #2a5aa0;
+  margin: 10px 0 16px 0;
+  background: #e67300;
   color: white;
-  padding: 14px 26px;
+  padding: 18px 36px;
   border-radius: 6px;
   font-weight: 700;
+  font-size: 1.15rem;
   text-decoration: none;
+  transition: background 0.2s;
 }
 
 .rsvp-button:hover {
-  background: #204781;
+  background: #cc6600;
 }
 
 .rsvp-help {
@@ -127,13 +163,30 @@ h2 {
   font-size: 0.95rem;
 }
 
+/* Sponsors */
+
+.sponsor-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sponsor-list li {
+  padding: 8px 14px;
+  margin: 6px 0;
+  background: #fdf6ef;
+  border-left: 3px solid #f28c28;
+  border-radius: 0 6px 6px 0;
+  font-weight: 600;
+}
+
 /* Links */
 
 a {
-  color: #2a5aa0;
+  color: #d46b08;
 }
 
 a:hover {
+  color: #e67300;
   text-decoration: underline;
 }
 
@@ -142,13 +195,20 @@ a:hover {
 footer {
   text-align: center;
   padding: 40px 20px;
-  background: #eceff3;
+  background: #1a1a1a;
+  color: #ccc;
   font-size: .9rem;
 }
 
-.print-note {
-  margin-top: 8px;
-  color: #666;
+.footer-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+footer a {
+  color: #f28c28;
 }
 
 /* Animation */
@@ -163,6 +223,30 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+
+  .schedule span {
+    display: block;
+    margin-bottom: 2px;
   }
 
 }
