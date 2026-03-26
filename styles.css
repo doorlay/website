@@ -3,167 +3,283 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   margin: 0;
-  background: #f6f7f9;
-  color: #2d2d2d;
+  background: #0d0a06;
+  color: #e8ddd0;
   line-height: 1.7;
   font-size: 17px;
 }
 
-/* Header */
+/* Hero */
 
-header {
-  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
-  color: white;
+.hero {
+  background:
+    linear-gradient(to bottom, rgba(13,10,6,0) 40%, #0d0a06 100%),
+    url('assets/Reunion_BG.png') center top / 100% auto no-repeat;
   text-align: center;
-  padding: 60px 20px 70px;
+  padding: 80px 20px 100px;
+  position: relative;
+  overflow: hidden;
 }
 
-.header-logo {
-  width: 160px;
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, transparent 30%, rgba(13,10,6,0.7) 80%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(ellipse at center, rgba(13,10,6,0.6) 0%, transparent 70%);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.hero-logo {
+  width: 200px;
   height: auto;
   margin-bottom: 20px;
+  filter: drop-shadow(0 0 30px rgba(242, 140, 40, 0.5));
 }
 
-header h1 {
+.hero h1 {
+  font-family: "Oswald", sans-serif;
   margin: 0;
-  font-size: 2.6rem;
-  letter-spacing: 1px;
+  font-size: 2.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(242, 140, 40, 0.4), 0 2px 8px rgba(0,0,0,0.9);
 }
 
-.subtitle {
-  font-size: 1.4rem;
-  margin-top: 10px;
+.hero .year {
+  font-size: 4rem;
+  display: block;
   color: #f28c28;
-  font-weight: 600;
+  text-shadow: 0 0 30px rgba(242, 140, 40, 0.6), 0 2px 8px rgba(0,0,0,0.9);
+  letter-spacing: 8px;
 }
 
-.date {
-  margin-top: 8px;
-  font-size: 1.2rem;
-  opacity: .9;
+.reunion-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #f28c28;
+  text-transform: uppercase;
+  margin: 5px 0 20px;
+  text-shadow: 0 0 25px rgba(242, 140, 40, 0.5), 0 2px 8px rgba(0,0,0,0.9);
+  letter-spacing: 4px;
+}
+
+.reunion-title sup {
+  font-size: 0.5em;
+}
+
+.hero-date {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  text-shadow: 0 0 10px rgba(242, 140, 40, 0.3);
 }
 
 /* Navigation */
 
 nav {
-  background: rgba(26, 26, 26, 0.95);
-  border-bottom: 1px solid #333;
+  background: rgba(13, 10, 6, 0.95);
+  border-bottom: 1px solid rgba(242, 140, 40, 0.3);
+  border-top: 1px solid rgba(242, 140, 40, 0.3);
   text-align: center;
   padding: 16px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
 }
 
 nav a {
+  font-family: "Oswald", sans-serif;
   margin: 0 16px;
   padding: 8px 10px;
   text-decoration: none;
   color: #f28c28;
   font-weight: 600;
-  transition: color 0.2s;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
 nav a:hover {
   color: #ffb366;
-  text-decoration: underline;
+  text-decoration: none;
+  text-shadow: 0 0 12px rgba(242, 140, 40, 0.6);
 }
 
 /* Layout */
 
 main {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
   padding: 60px 20px;
+  background: radial-gradient(ellipse at top center, rgba(80, 40, 10, 0.15) 0%, transparent 70%);
 }
 
 section {
   margin-bottom: 80px;
   scroll-margin-top: 100px;
-  animation: fadeUp .35s ease both;
+  animation: fadeUp .5s ease both;
 }
 
 h2 {
-  color: #1a1a1a;
-  border-bottom: 3px solid #f28c28;
-  padding-bottom: 6px;
-  margin-bottom: 18px;
+  font-family: "Oswald", sans-serif;
+  color: #f28c28;
+  border-bottom: 2px solid rgba(242, 140, 40, 0.3);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px rgba(242, 140, 40, 0.3);
 }
 
 /* Cards */
 
 .card {
-  background: white;
-  border-radius: 8px;
+  background: rgba(30, 24, 16, 0.8);
+  border-radius: 10px;
   padding: 30px;
-  border: 1px solid #e7e7e7;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  border: 1px solid rgba(242, 140, 40, 0.2);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4), inset 0 1px 0 rgba(242, 140, 40, 0.1);
 }
 
-/* Schedule */
+/* Timeline / Schedule */
 
-.schedule p {
-  margin: 14px 0;
-  padding: 10px 14px;
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 16px 20px;
+  background: rgba(30, 24, 16, 0.6);
+  border-left: 3px solid rgba(242, 140, 40, 0.4);
+  border-radius: 0 8px 8px 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.timeline-item:hover {
+  background: rgba(50, 35, 18, 0.8);
+  border-left-color: #f28c28;
+}
+
+.timeline-item.featured {
+  background: rgba(242, 140, 40, 0.1);
   border-left: 3px solid #f28c28;
-  background: #fdf6ef;
-  border-radius: 0 6px 6px 0;
+  box-shadow: 0 0 20px rgba(242, 140, 40, 0.1);
 }
 
-.schedule span {
+.timeline-time {
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
-  color: #1a1a1a;
-  margin-right: 12px;
-  min-width: 100px;
-  display: inline-block;
+  color: #f28c28;
+  min-width: 110px;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
 
-/* Limited notice */
+.timeline-detail {
+  color: #e8ddd0;
+}
 
-.limited {
-  background: #fff3e0;
-  border: 1px solid #f28c28;
-  border-radius: 6px;
-  padding: 14px 18px;
-  font-weight: 600;
+.timeline-detail em {
+  color: #a89480;
+}
+
+/* Highlight & Limited boxes */
+
+.highlight-box {
   text-align: center;
+  padding: 16px 20px;
   margin-top: 20px;
+  border: 1px solid rgba(242, 140, 40, 0.5);
+  border-radius: 8px;
+  background: rgba(242, 140, 40, 0.08);
+  font-size: 1.1rem;
+  color: #f28c28;
+}
+
+.limited-box {
+  text-align: center;
+  margin-top: 16px;
+  padding: 14px 18px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(242, 140, 40, 0.15);
+  border-radius: 8px;
+  border: 1px solid rgba(242, 140, 40, 0.3);
+  text-shadow: 0 0 10px rgba(242, 140, 40, 0.3);
 }
 
 /* RSVP */
 
 .rsvp-card {
   text-align: center;
-  padding: 40px 30px;
+  padding: 50px 30px;
 }
 
 .rsvp-button {
   display: inline-block;
-  margin: 10px 0 16px 0;
-  background: #e67300;
-  color: white;
-  padding: 18px 36px;
-  border-radius: 6px;
+  margin: 10px 0 20px 0;
+  background: linear-gradient(135deg, #e67300, #f28c28);
+  color: #fff;
+  padding: 20px 44px;
+  border-radius: 8px;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   text-decoration: none;
-  transition: background 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 25px rgba(242, 140, 40, 0.3), 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .rsvp-button:hover {
-  background: #cc6600;
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px rgba(242, 140, 40, 0.5), 0 8px 25px rgba(0,0,0,0.5);
+  color: #fff;
+  text-decoration: none;
 }
 
 .rsvp-help {
-  color: #555;
+  color: #a89480;
   font-size: 0.95rem;
 }
 
 /* Sponsors */
+
+.sponsors-heading {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  color: #f28c28;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
 
 .sponsor-list {
   list-style: none;
@@ -171,22 +287,30 @@ h2 {
 }
 
 .sponsor-list li {
-  padding: 8px 14px;
+  padding: 10px 16px;
   margin: 6px 0;
-  background: #fdf6ef;
+  background: rgba(242, 140, 40, 0.08);
   border-left: 3px solid #f28c28;
   border-radius: 0 6px 6px 0;
   font-weight: 600;
+  color: #e8ddd0;
+}
+
+.sponsor-cta {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(242, 140, 40, 0.15);
 }
 
 /* Links */
 
 a {
-  color: #d46b08;
+  color: #f28c28;
+  transition: color 0.2s;
 }
 
 a:hover {
-  color: #e67300;
+  color: #ffb366;
   text-decoration: underline;
 }
 
@@ -195,16 +319,18 @@ a:hover {
 footer {
   text-align: center;
   padding: 40px 20px;
-  background: #1a1a1a;
-  color: #ccc;
+  background: rgba(13, 10, 6, 0.95);
+  border-top: 1px solid rgba(242, 140, 40, 0.2);
+  color: #7a6e60;
   font-size: .9rem;
 }
 
 .footer-logo {
-  width: 60px;
+  width: 50px;
   height: auto;
   margin-bottom: 10px;
-  opacity: 0.8;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 8px rgba(242, 140, 40, 0.3));
 }
 
 footer a {
@@ -214,39 +340,62 @@ footer a {
 /* Animation */
 
 @keyframes fadeUp {
-
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(16px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
-
 }
 
 /* Responsive */
 
 @media (max-width: 600px) {
 
-  header h1 {
-    font-size: 1.8rem;
+  .hero {
+    padding: 50px 16px 60px;
   }
 
-  .subtitle {
-    font-size: 1.1rem;
+  .hero-logo {
+    width: 140px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero .year {
+    font-size: 2.8rem;
+  }
+
+  .reunion-title {
+    font-size: 1.8rem;
   }
 
   nav a {
     margin: 0 8px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
   }
 
-  .schedule span {
-    display: block;
-    margin-bottom: 2px;
+  .timeline-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .timeline-time {
+    min-width: auto;
+  }
+
+  .rsvp-button {
+    padding: 16px 28px;
+    font-size: 1.1rem;
+  }
+
+  .card {
+    padding: 20px;
   }
 
 }
@@ -261,11 +410,18 @@ footer a {
 
   body {
     background: white;
+    color: #222;
+  }
+
+  .hero {
+    background: none;
+    padding: 30px 20px;
   }
 
   .card {
     box-shadow: none;
     border: 1px solid #ccc;
+    background: white;
   }
 
 }

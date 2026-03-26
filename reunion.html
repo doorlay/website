@@ -5,21 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>San Mateo High School – Class of 1986 – 40th Reunion</title>
 <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-<img src="assets/bearcats-logo.png" alt="San Mateo Bearcats" class="header-logo">
-<h1>San Mateo High School</h1>
-<p class="subtitle">Class of 1986 &bull; 40th Reunion</p>
-<p class="date">November 7th, 2026</p>
-</header>
+<div class="hero">
+<div class="hero-content">
+<img src="assets/bearcats-logo.png" alt="San Mateo Bearcats" class="hero-logo">
+<h1>Class of <span class="year">1986</span></h1>
+<p class="reunion-title">40<sup>th</sup> Reunion</p>
+<p class="hero-date">November 7th, 2026</p>
+</div>
+</div>
 
 <nav>
 <a href="#schedule">Schedule</a>
 <a href="#party">The Party</a>
-<a href="#rsvp">RSVP</a>
+<a href="#rsvp">Tickets</a>
 <a href="#sponsors">Sponsors</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -30,12 +33,35 @@
 
 <h2>The Day</h2>
 
-<div class="card schedule">
+<div class="timeline">
 
-<p><span>11:00 AM</span> Little Big Game @ Burlingame High</p>
-<p><span>~2:00 PM</span> Optional post-game hang @ <a href="https://www.twelvemonthburlingame.com/" target="_blank">Twelve Month</a> <em>(no host)</em></p>
-<p><span>Evening</span> Dinner with friends @ you decide</p>
-<p><span>7:30 PM</span> Reunion Party @ <a href="https://www.fogbird.co/" target="_blank">Fogbird Restaurant</a></p>
+<div class="timeline-item">
+<div class="timeline-time">11:00 AM</div>
+<div class="timeline-detail">
+<strong>Little Big Game</strong> @ Burlingame High
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-time">~2:00 PM</div>
+<div class="timeline-detail">
+Optional post-game hang @ <a href="https://www.twelvemonthburlingame.com/" target="_blank">Twelve Month</a> <em>(no host)</em>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-time">Evening</div>
+<div class="timeline-detail">
+Dinner with friends @ you decide
+</div>
+</div>
+
+<div class="timeline-item featured">
+<div class="timeline-time">7:30 PM</div>
+<div class="timeline-detail">
+<strong>Reunion Party</strong> @ <a href="https://www.fogbird.co/" target="_blank">Fogbird Restaurant</a>
+</div>
+</div>
 
 </div>
 
@@ -53,17 +79,17 @@ Reconnect with classmates and share memories from the past four decades.
 </p>
 
 <p>
-<strong>When:</strong> 7:30 PM &ndash; ?<br>
+<strong>When:</strong> 7:30 PM &ndash; ??<br>
 <strong>Where:</strong> <a href="https://www.fogbird.co/" target="_blank">Fogbird Restaurant</a>
 </p>
 
-<p>
-Bar bites and two drinks included for <strong>$60</strong>.
-</p>
+<div class="highlight-box">
+Bar bites and two drinks included for <strong>$60</strong>
+</div>
 
-<p class="limited">
+<div class="limited-box">
 Space is limited to 75 &mdash; get your tickets before it sells out!
-</p>
+</div>
 
 </div>
 
@@ -98,13 +124,13 @@ Want to promote your business and help cover the restaurant cost?
 Be a sponsor &mdash; see your name or business proudly displayed at the party.
 </p>
 
-<p><strong>Current Sponsors:</strong></p>
+<p class="sponsors-heading">Current Sponsors</p>
 <ul class="sponsor-list">
 <li>Peninsula Tennis Club</li>
 <li>Home Maid Ravioli</li>
 </ul>
 
-<p>
+<p class="sponsor-cta">
 Interested? Email <a href="mailto:soterians@gmail.com">Jackie Wheeler</a> to inquire about sponsorships.
 </p>
 
