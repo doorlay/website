@@ -233,16 +233,16 @@ h2 {
   text-shadow: 0 0 10px rgba(242, 140, 40, 0.3);
 }
 
-/* RSVP */
+/* Tickets block (below timeline) */
 
-.rsvp-card {
+.tickets-block {
   text-align: center;
-  padding: 50px 30px;
+  margin-top: 24px;
 }
 
 .rsvp-button {
   display: inline-block;
-  margin: 10px 0 20px 0;
+  margin: 24px 0 0 0;
   background: linear-gradient(135deg, #e67300, #f28c28);
   color: #fff;
   padding: 20px 44px;
@@ -262,11 +262,6 @@ h2 {
   box-shadow: 0 0 40px rgba(242, 140, 40, 0.5), 0 8px 25px rgba(0,0,0,0.5);
   color: #fff;
   text-decoration: none;
-}
-
-.rsvp-help {
-  color: #a89480;
-  font-size: 0.95rem;
 }
 
 /* Sponsors */
