@@ -234,3 +234,13 @@ footer.site-footer {
   padding: 0.75rem 1rem;
   margin: 1rem 0;
 }
+
+.profile-pic {
+  float: left;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 1.25rem 0.75rem 0;
+  border: 3px solid var(--maincolor);
+}
