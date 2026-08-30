@@ -101,6 +101,9 @@ p { line-height: 1.5; }
 .meta {
   color: var(--muted);
   letter-spacing: -0.5px;
+  /* keep out of the floated profile pic, which otherwise indents this line
+     while the list below it stays flush against the container edge */
+  clear: left;
 }
 
 time { color: var(--muted); }
