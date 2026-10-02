@@ -49,7 +49,7 @@ html {
   background: var(--bg);
   color: var(--fg);
   font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.6em;
 }
 
@@ -101,9 +101,6 @@ p { line-height: 1.5; }
 .meta {
   color: var(--muted);
   letter-spacing: -0.5px;
-  /* keep out of the floated profile pic, which otherwise indents this line
-     while the list below it stays flush against the container edge */
-  clear: left;
 }
 
 time { color: var(--muted); }
@@ -239,11 +236,51 @@ footer.site-footer {
 }
 
 .profile-pic {
-  float: left;
-  width: 120px;
-  height: 120px;
+  display: block;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 1.25rem 0.75rem 0;
+  margin: 1.5rem auto 0.75rem auto;
   border: 3px solid var(--maincolor);
+}
+
+/* ===== Centered page variant (class goes on <body>) ===== */
+.centered {
+  text-align: center;
+  /* center the content block in the viewport; min-height rather than height so
+     a page taller than the viewport just scrolls instead of being clipped */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 16px = the 8px body margin, top + bottom; dvh keeps mobile browser
+     chrome from forcing a scrollbar, with vh as the fallback */
+  min-height: calc(100vh - 16px);
+  min-height: calc(100dvh - 16px);
+}
+
+.centered h1 {
+  margin-top: 0.5rem;
+}
+
+.centered > .content {
+  width: 100%;
+  /* align-items centers the margin box, so a bottom margin lifts the content
+     by half its size -- bump this to shift the block further up or down */
+  margin-bottom: 8vh;
+}
+
+.centered header.site-header {
+  justify-content: center;
+}
+
+/* no "* " markers here, so the hanging-indent trick isn't needed either */
+.centered ul {
+  padding-left: 0;
+}
+.centered ul li {
+  text-indent: 0;
+}
+.centered ul > li::before {
+  content: none;
 }
