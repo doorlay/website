@@ -49,9 +49,12 @@ html {
   background: var(--bg);
   color: var(--fg);
   font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.6em;
 }
+
+/* the homepage keeps the larger size; every other page uses the base above */
+html.home { font-size: 17px; }
 
 body {
   display: block;
