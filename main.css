@@ -277,13 +277,11 @@ footer.site-footer {
   justify-content: center;
 }
 
-/* no "* " markers here, so the hanging-indent trick isn't needed either */
+/* centered lines don't need the hanging-indent trick; the "* " marker just
+   centers along with the rest of the line */
 .centered ul {
   padding-left: 0;
 }
 .centered ul li {
   text-indent: 0;
-}
-.centered ul > li::before {
-  content: none;
 }
